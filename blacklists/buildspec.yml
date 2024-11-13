@@ -27,8 +27,14 @@ phases:
       - cat imagedefinitions.json
 artifacts:
   files:
-    - "blacklists/**/*"
     - imagedefinitions.json
+    - "blacklists/**/*"
     - imageDetail.json
-    - appspec.yml
-    - taskdef.json
+  secondary-artifacts:
+    DefinitionArtifact:
+      files:
+        - appspec.json
+        - taskdef.json
+    ImageArtifact:
+      files:
+        - imageDetail.json
