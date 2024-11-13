@@ -27,8 +27,8 @@ phases:
       - cat imagedefinitions.json
 artifacts:
   files:
-    - "blacklists/*"
-    - imagedefinitions.json
+    - "blacklists/**/*"
+    - "blacklists/imagedefinitions.json"
     - imageDetail.json
   secondary-artifacts:
     DefinitionArtifact:
