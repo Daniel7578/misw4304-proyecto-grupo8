@@ -9,14 +9,40 @@
           "containerPort": 3000
         }
       ],
-
+      "environment": [
+        {
+          "name": "DB_HOST",
+          "value": "database-1.c3mqeeua03le.us-east-2.rds.amazonaws.com"
+        },
+        {
+          "name": "DB_NAME",
+          "value": "postgres"
+        },
+        {
+          "name": "DB_PASSWORD",
+          "value": "postgres"
+        },
+        {
+          "name": "DB_PORT",
+          "value": "5432"
+        },
+        {
+          "name": "DB_USER",
+          "value": "postgres"
+        },
+        {
+          "name": "SECRET_TOKEN",
+          "value": "secretoken"
+        }
+      ],
       "image": "<IMAGE1_NAME>",
       "essential": true,
       "name": "container-blacklist"
     }
   ],
-
-  "requiresCompatibilities": ["FARGATE"],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
   "networkMode": "awsvpc",
   "cpu": "512",
   "memory": "1024",
