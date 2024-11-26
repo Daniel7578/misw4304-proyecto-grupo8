@@ -16,6 +16,7 @@ pytest-flask = "*"
 exceptiongroup = "*"
 pytest-cov = "*"
 requests = "*"
+newrelic = "*"
 
 [dev-packages]
 

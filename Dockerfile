@@ -15,4 +15,13 @@ ENV FLASK_RUN_PORT=3000
 
 EXPOSE 3000
 
-CMD ["pipenv", "run", "flask", "run"]
+CMD ["flask", "run"]
+
+ENV NEW_RELIC_APP_NAME="blacklists"
+ENV NEW_RELIC_LOG=stdout
+ENV NEW_RELIC_DISTRIBUTED_TRACING_ENABLED=true
+ENV NEW_RELIC_LICENSE_KEY=09f1bca8cf77665cee4759b14973a469FFFFNRAL
+ENV NEW_RELIC_LOG_LEVEL=info
+
+ENTRYPOINT [ "pipenv", "run", "newrelic-admin", "run-program" ]
+

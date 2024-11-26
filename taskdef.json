@@ -33,6 +33,10 @@
         {
           "name": "SECRET_TOKEN",
           "value": "secretoken"
+        },
+        {
+          "name": "NEW_RELIC_LICENSE_KEY",
+          "value": "09f1bca8cf77665cee4759b14973a469FFFFNRAL"
         }
       ],
       "image": "<IMAGE1_NAME>",
